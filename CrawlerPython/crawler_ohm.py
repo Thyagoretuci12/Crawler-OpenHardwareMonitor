@@ -43,7 +43,7 @@ with PoolManager() as pool:
             database='Crawler',
             user='ScrapUser',
             password='Scrap2023'
-        )
+        ) 
 
         try:
             cursor = connection.cursor()

@@ -23,7 +23,7 @@ consoleColors = {
 }
 
 def mostrarTexto():
-    print(f"""{consoleColors['cyan']}
+    print(f"""
         ██╗    ██╗███████╗██╗      ██████╗ ██████╗ ███╗   ███╗███████╗
         ██║    ██║██╔════╝██║     ██╔════╝██╔═══██╗████╗ ████║██╔════╝
         ██║ █╗ ██║█████╗  ██║     ██║     ██║   ██║██╔████╔██║█████╗  
@@ -36,7 +36,7 @@ def mostrarTexto():
     systemClear = ('clear' if platform.system() == 'Linux' else 'cls')
     os.system(systemClear)
         
-    print(f"""{consoleColors['cyan']}
+    print(f"""
                              ████████╗ ██████╗ 
                              ╚══██╔══╝██╔═══██╗
                                 ██║   ██║   ██║
@@ -50,7 +50,7 @@ def mostrarTexto():
     os.system(systemClear)
         
 
-    print(f"""{consoleColors['magenta']} 
+    print(f"""
          ██████╗██████╗  █████╗ ██╗    ██╗██╗     ███████╗██████╗ 
         ██╔════╝██╔══██╗██╔══██╗██║    ██║██║     ██╔════╝██╔══██╗
         ██║     ██████╔╝███████║██║ █╗ ██║██║     █████╗  ██████╔╝
