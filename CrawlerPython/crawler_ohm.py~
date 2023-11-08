@@ -1,0 +1,39 @@
+from json import loads
+from time import sleep
+from urllib3 import PoolManager
+import mysql.connector
+import os
+import platform
+import showText
+
+showText.mostrarTexto()
+
+def conversor(valor):
+    return float(valor[0:4].replace(",", '.'))
+
+with PoolManager() as pool:
+    while True:
+        response = pool.request('GET', 'https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023')
+        data = loads(response.data.decode('utf-8'))
+        #temp_value = data['Children'][0]['Children'][1]['Children'][1]['Children'][0]['Value']
+        #ram_value = data['Children'][0]['Children'][2]['Children'][1]['Children'][0]['Value']
+        #disk_value = data['Children'][0]['Children'][4]['Children'][0]['Children'][0]['Value']
+
+        print(f"Printing response: {response}")
+        sleep(2)
+        print(f"Printing data: {data}")
+
+        systemClear = ('clear' if platform.system() == 'Linux' else 'cls')
+        os.system(systemClear)
+        
+
+        #insert = f"INSERT INTO Registros (dataHora, temp_value, ram_value, disk_value) VALUES (now(), {temp_value},{ram_value}, {disk_value});"
+
+        #connection = mysql.connector.connect(
+        #    host='localhost',
+        #    database='Crawler',
+        #    user='ScrapUser',
+        #    password='Scrap2023'
+        #)
+
+        sleep(5)
